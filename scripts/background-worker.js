@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(() => {
   {
    id: 'hide-shorts',
    js: ['scripts/content.js'],
-   matches: ['https://www.youtube.com/*'],
+   matches: urlMatches,
    runAt: 'document_end'
   }
  ]);
@@ -17,7 +17,7 @@ chrome.webNavigation.onCompleted.addListener(() => {
    {
     id: 'hide-shorts',
     js: ['scripts/content.js'],
-    matches: ['https://www.youtube.com/*'],
+    matches: urlMatches,
     runAt: 'document_end'
    }
   ]);
