@@ -1,4 +1,9 @@
-const urlMatches = ["*://*.youtube.com/*", "*://*.youtu.be/*"]
+const urlMatches = [
+	"*://*.youtube.com/*", 
+	"*://*.youtu.be/*", 
+	"*://*.facebook.com/*",
+    	"*://*.fb.com/*"
+]
 
 chrome.runtime.onInstalled.addListener(() => {
  chrome.scripting.registerContentScripts([

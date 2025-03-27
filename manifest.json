@@ -2,23 +2,38 @@
  "manifest_version": 3,
  "name": "Hide Youtube Shorts",
  "version": "1.0",
- "description": "Automatically Hide Youtube Shorts",
+ "description": "Automatically Hide Youtube Shorts & Facebook Reels",
  "permissions": ["scripting", "webNavigation"],
- "host_permissions": ["*://*.youtube.com/*", "*://*.youtu.be/*"],
+ "host_permissions": [
+	"*://*.youtube.com/*", 
+	"*://*.youtu.be/*", 
+	"*://*.facebook.com/*",
+    	"*://*.fb.com/*"
+ ],
  "background": {
   "service_worker": "scripts/background-worker.js"
  },
  "content_scripts": [
   {
    "js": ["scripts/content.js"],
-   "matches": ["*://*.youtube.com/*", "*://*.youtu.be/*"],
+   "matches": [	
+	"*://*.youtube.com/*", 
+	"*://*.youtu.be/*", 
+	"*://*.facebook.com/*",
+    	"*://*.fb.com/*"
+   ],
    "run_at": "document_end"
   }
  ],
  "web_accessible_resources": [
   {
    "resources": ["scripts/content.js"],
-   "matches": ["*://*.youtube.com/*", "*://*.youtu.be/*"]
+   "matches": [	
+	"*://*.youtube.com/*", 
+	"*://*.youtu.be/*", 
+	"*://*.facebook.com/*",
+    	"*://*.fb.com/*"
+   ]
   }
  ]
 }
